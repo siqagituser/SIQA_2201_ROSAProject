@@ -7,3 +7,12 @@ packages:
   gitUrl: https://github.com/siqagituser
   gitUsername: siqagituser
   gitBranch: main
+services:
+- serviceName: project.siqa_2201_rosa.integrations:alertFS
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+- serviceName: pub.alert:emit
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2020
