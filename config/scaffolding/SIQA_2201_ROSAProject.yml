@@ -13,7 +13,56 @@ packages:
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: softwareag
 services:
+- serviceName: project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_22jan
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+- serviceName: project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBTest
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+- serviceName: project.siqa_2201_rosa.integrations:SIQAAdapterFlow
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+- serviceName: project.siqa_2201_rosa.integrations:alertFS
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+- serviceName: pub.alert:emit
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2020
+- serviceName: project.siqa_2201_rosa.integrations:deepclonetest
+  packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+- serviceName: pub.string:stringToBytes
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2020
+- serviceName: pub.utils:deepClone
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2020
+- serviceName: pub.string:bytesToString
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2020
 - serviceName: project.siqa_2201_rosa.integrations:tppfs
   packages:
   - name: SIQA_2201_ROSAProject
@@ -28,3 +77,50 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2020
+configurationVariables:
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.serverName
+  : vmiboint01
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.databaseName
+  : SIQACloud
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.user
+  : sa
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionEnabled
+  : "false"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.keyStore
+  : ""
