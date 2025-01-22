@@ -5,7 +5,7 @@
 
   <!-- nodes -->
 
-<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBTest" VALIDATE-IN="" VALIDATE-OUT="">
+<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBRTYUI" VALIDATE-IN="" VALIDATE-OUT="">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -29,7 +29,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">DBTestInput</value>
+        <value name="field_name">DBRTYUIInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
