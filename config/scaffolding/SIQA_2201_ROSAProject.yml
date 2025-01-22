@@ -7,15 +7,15 @@ packages:
   gitUrl: https://github.com/siqagituser
   gitUsername: siqagituser
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: softwareag
 - name: TPP_services_in_FCS
   version: "1.0"
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
-  gitBranch: main
-- name: WmJDBCAdapter
-  wpmServer: https://packages.webmethods.io
-  wpmRegistry: softwareag
+  gitBranch: one_service
 services:
 - serviceName: project.siqa_2201_rosa.integrations:SIQAAdapterFlow
   packages:
@@ -30,20 +30,28 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
 configurationVariables:
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.expireTimeout
+  : "1000"
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.databaseName
-  : SIQACloud
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.expireTimeout
-  : "1000"
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.trustStore
   : ""
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.serverName
+  : vmiboint01
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.networkProtocol
   : tcp
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.dbType
@@ -56,23 +64,15 @@ configurationVariables:
   : "10"
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.poolIncrementSize
   : "1"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.transactionType
-  : NO_TRANSACTION
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.password
-  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.portNumber
-  : "1433"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.otherProperties
-  : loginTimeout=60;driverType=thin;
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.startupRetryCount
   : "0"
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.driverType
-  : Progress® DataDirect®
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.databaseName
+  : SIQACloud
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionSettings.keyStore
   : ""
