@@ -26,6 +26,11 @@ packages:
   gitUrl: https://github.webmethods.io/mjan
   gitUsername: kvv
   gitBranch: main
+- name: PackX
+  gitServerName: siqagituser
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: siqagituser
+  gitBranch: main
 services:
 - serviceName: project.siqa_2201_rosa.integrations:SIQAAdapterFlow
   packages:
