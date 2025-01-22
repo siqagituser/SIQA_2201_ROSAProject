@@ -17,20 +17,18 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
 services:
-- serviceName: project.siqa_2201_rosa.integrations:tppfs
+- serviceName: project.siqa_2201_rosa.integrations:SIQAAdapterFlow
   packages:
   - name: SIQA_2201_ROSAProject
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: services:add3Ints
+- serviceName: project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBRTYUI
   packages:
+  - name: SIQA_2201_ROSAProject
+    version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
-- serviceName: pub.math:addInts
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2020
 configurationVariables:
   ? artConnection.SIQA_2201_ROSAProject.project.siqa_2201_rosa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_22jan.connectionManagerSettings.heartBeatInterval
   : "0"
