@@ -13,18 +13,17 @@
     <value name="SIQACloudStreamsTests">1.0</value>
     <value name="PackX">1.0</value>
     <value name="PackY">1.0</value>
-    <value name="SSL_JDBC_Test">1.0</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">38</value>
+  <value name="build">39</value>
   <null name="description"/>
   <value name="created_date">22-01-2025 11:55:38 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2025-01-23T04:05:41.120788897Z</value>
+  <value name="lastUpdated">2025-01-23T04:33:46.319083968Z</value>
   <value name="wmProjectId">fl260d9d4983ef8d4c959c52</value>
   <value name="creator">siqa auto</value>
 </Values>
